@@ -1,6 +1,6 @@
 from math import ceil
 
-from convertion import convert_to_number
+from utils.convertion import convert_to_number
 
 def calculate_percentile(base, numbers):
     numbers.sort()
@@ -18,13 +18,11 @@ def calculate_percentile(base, numbers):
 
     return 0
 
-def main():
+
+if __name__ == '__main__':
     percentile_base = int(input('Informe a base: '))
     sample = [convert_to_number(x) for x in input('Informe a amostra: ').split(' ')]
 
     result = calculate_percentile(percentile_base, sample)
 
     print(f'O percentil de {percentile_base} é {result}')
-
-if __name__ == '__main__':
-    main()
